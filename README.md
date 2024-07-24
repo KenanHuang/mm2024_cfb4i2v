@@ -75,3 +75,14 @@ We also put our training logs in training_logs, we contain two types of value fo
 Acc means we sum the logits of RGB and flow branches.
 
 AccSf means we sum the logits after softmax of RGB and flow branches, which is  reported in our manuscript.
+
+## Citing
+### BibTeX
+```bibtex
+@inproceedings{huang2024cfb4i2v,
+  title={Unsupervised Image-to-Video Adaptation via Category-aware Flow Memory Bank and Realistic Video Generation},
+  author={Huang, Kenan and Zhuo, Junbao, and Wang, Shuhui and Su, Chi and Huang, Qingming and Ma, Huimin},
+  booktitle={Proceedings of the 32st ACM International Conference on Multimedia},
+  year={2024}
+}
+```
