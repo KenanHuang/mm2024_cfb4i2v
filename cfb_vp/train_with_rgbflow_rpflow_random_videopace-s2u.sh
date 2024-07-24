@@ -1,0 +1,24 @@
+python train_with_rgbflow_rpflow_random_videopace.py \
+-mode RGB_AND_FLOW \
+-save_model_path S2U_CDB_VIDEOPACE \
+-save_npy_path ./S2U_CDB_60_VDPACE5_0.01 \
+-cdb_size 60 \
+-sset S \
+-dset U \
+-CLASS_NUM 12 \
+-frame_num 16 \
+-bs 32 \
+-root /data/datasets/lab/Stanford40 \
+-sourcefile /data/datasets/lab/model_data/I2V/StoU/list/sourcelistname_s402ucf_shared.txt \
+-droot /data/datasets/lab/ucf101 \
+-targetfile /data/datasets/lab/model_data/I2V/StoU/list/targetlistname.txt \
+-lr 0.015 \
+-flow_r1 1.0 \
+-pre 10 \
+-method CDB_VDPACE5 \
+-gpu_id 6,7 \
+-cdb_frame_sel random \
+-sample_rate 5 \
+-video_pace_cls_r1 0.01 \
+-test_interval 1 \
+-total_epoch 20 | tee ./final_logs/S2U_CDB60_VIDPACE5_0.01_bs32_lr0.015_finalval

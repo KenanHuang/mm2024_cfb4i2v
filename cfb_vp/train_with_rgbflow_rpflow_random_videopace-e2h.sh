@@ -1,0 +1,23 @@
+python train_with_rgbflow_rpflow_random_videopace.py \
+-mode RGB_AND_FLOW \
+-save_model_path I3D_RGB_FLOW_E2H_RANDOM_VIDEOPACE \
+-save_npy_path ./E2H_CDB_60_VDPACE_5_0.2 \
+-cdb_size 60 \
+-sset E \
+-dset H \
+-CLASS_NUM 13 \
+-frame_num 16 \
+-bs 16 \
+-root /root/data/datasets/lab/EADs \
+-sourcefile /root/data/datasets/lab/model_data/I2V/EtoH/list/sourcelistname_ead2hmdb_shared.txt \
+-droot /root/data/datasets/lab/hmdb51 \
+-targetfile /root/data/datasets/lab/model_data/I2V/EtoH/list/targetlistname.txt \
+-lr 0.05 \
+-flow_r1 1.0 \
+-pre 10 \
+-method CDB_60_VDPACE_5_0.2 \
+-gpu_id 2 \
+-cdb_frame_sel random \
+-sample_rate 5 \
+-video_pace_cls_r1 0.2 \
+-total_epoch 60 | tee ./final_logs/E2H_CDB60_VIDPACE5_0.2_bs16_lr0.05_finalval
