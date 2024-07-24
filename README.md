@@ -1,14 +1,14 @@
 The main code of our approach is stored in **cfb_vp**, the code of generating source frames is stored in **depthstillation**.
 
-## Steps:
+## Training Steps:
 
-##### 1. Prepare the pretrained model of I3D
+### 1. Prepare the pretrained model of I3D
 
 The *rgb_imagenet.pt* and *flow_imagenet.pt* can be found in https://github.com/piergiaj/pytorch-i3d/tree/master/models.
 
 please download them and store into **codes/cfb_vp/models**
 
-##### 2. Prepare the data file
+### 2. Prepare the data file
 
 For training and evaluation,we need to prepare two datafiles for source and target domain respectively.
 
@@ -32,7 +32,7 @@ Target data are recorded as followed:
 
 Both of them are formated in "{data path} {ground-truth label}"
 
-##### 3. Generate source frames
+### 3. Generate source frames
 
 The code stored in **depthstillation** contains the depthmap estimation network *MiDas*. And the main code for generating realistic source frames.
 
@@ -42,7 +42,7 @@ For users,just need to replace the the value of *--input_sourcelist* and *--outp
 bash ./start.sh
 ```
 
-##### 4. Train model
+### 4. Train model
 
 **train_with_rgbflow_rpflow_random_videopace.py** is our main code of implement.
 
