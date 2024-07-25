@@ -12,6 +12,15 @@ The main code of our approach is stored in **cfb_vp**, the code of generating so
 
 ## Training
 
+### 0. Env Setting
+```
+python 3.8.0
+torch 1.11.0
+torchvision 0.12.0
+numpy 1.23.0
+```
+
+
 ### 1. Prepare the pretrained model of I3D
 
 The *rgb_imagenet.pt* and *flow_imagenet.pt* can be found in https://github.com/piergiaj/pytorch-i3d/tree/master/models.
@@ -20,7 +29,7 @@ please download them and store into **codes/cfb_vp/models**
 
 ### 2. Prepare the data file
 
-For training and evaluation,we need to prepare two datafiles for source and target domain respectively.
+For training and evaluation, we need to prepare two datafiles for source and target domain respectively.
 
 Source data are recorded as followed:
 
@@ -46,7 +55,7 @@ Both of them are formated in "{data path} {ground-truth label}"
 
 The code stored in **depthstillation** contains the depthmap estimation network *MiDas*. And the main code for generating realistic source frames.
 
-For users,just need to replace the the value of *--input_sourcelist* and *--output_dir_path* and run the command as followed:
+For users, replace the the value of *--input_sourcelist* and *--output_dir_path* and run the command as followed:
 
 ```bash
 bash ./start.sh
@@ -58,13 +67,13 @@ bash ./start.sh
 
 We put the demo scripts for training model in the root of **cfb_vp**.
 
-For trainning the model for S2U benchmark,just run the following command as followed:
+For trainning the model for S2U benchmark, run the command as followed:
 
 ```bash
 bash ./train_with_rgbflow_rpflow_random_videopace-s2u.sh
 ```
 
-For trainning the model for E2h benchmark,just run the following command as followed:
+For trainning the model for E2h benchmark, run the command as followed:
 
 ```bash
 bash ./train_with_rgbflow_rpflow_random_videopace-e2h.sh
