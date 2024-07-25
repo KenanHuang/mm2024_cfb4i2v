@@ -61,6 +61,9 @@ For users, replace the the value of *--input_sourcelist* and *--output_dir_path*
 bash ./start.sh
 ```
 
+The generated video frames of EADs for E(EADs)→H(HMDB51) benchmark could be found in 
+https://drive.google.com/file/d/1yRXI8W0Nro_lOMFqgkRS3s6jcVJDD5nw/view?usp=sharing
+
 ### 4. Train model
 
 **train_with_rgbflow_rpflow_random_videopace.py** is our main code of implement.
