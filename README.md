@@ -3,7 +3,7 @@
 This is the official code for ACM MM 2024 (CCF-A) paper: Unsupervised Image-to-Video Adaptation via Category-aware Flow Memory Bank and Realistic Video Generation.
 
 ## Introduction
-We interest in training a video model using **labeled images** and **_unlabeled videos_** to classify _unlabeled videos_.
+We are interest in training a video model using **labeled images** and **_unlabeled videos_** to classify _unlabeled videos_.
 
 We firstly use a three-dimensional camera motion engine to convert the still images from source domain into realistic videos, mitigating the modality discrepancies between images and videos. Then, our proposed Category-aware Flow Memory Bank(CFB) replaces the optical flow of the generated video to address distribution gap. Finally, we enhance the model's speed perception by using 
 video pace prediction task, thereby enhancing the model's performance. Our method achieves SOTA performance on E(EADs)→H(HMDB51) and B(BU101)→U(UCF101) benchmarks, and also achieves competitive performance results on S(Stanford40)→U(UCF101) benchmark.
@@ -55,7 +55,7 @@ Both of them are formated in "{data path} {ground-truth label}"
 
 The code stored in **depthstillation** contains the depthmap estimation network *MiDas*. And the main code for generating realistic source frames.
 
-For users, replace the the value of *--input_sourcelist* and *--output_dir_path* and run the command as followed:
+For users, replace the value of *--input_sourcelist* and *--output_dir_path* and run the command as followed:
 
 ```bash
 bash ./start.sh
