@@ -89,4 +89,10 @@ Acc means we sum the logits of RGB and flow branches.
 AccSf means we sum the logits after softmax of RGB and flow branches, which is  reported in our manuscript.
 
 ## Citing
-coming soon
+```
+@inproceedings{huang2024unsupervised,
+  title={Unsupervised Image-to-Video Adaptation via Category-aware Flow Memory Bank and Realistic Video Generation},
+  author={Huang, Kenan and Zhuo, Junbao and Wang, Shuhui and Su, Chi and Huang, Qingming and Ma, Huimin},
+  booktitle={ACM Multimedia 2024}
+}
+```
